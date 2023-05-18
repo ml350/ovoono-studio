@@ -1,5 +1,4 @@
 <template>
-  <div id="app">
     <Header :title="headerTitle" :subtitle="headerSubtitle" :paragraph="headerParagraph" :imageUrl="logoImageUrl" />
     <VideoBanner />
     <AboutSection :image="aboutImageUrl" :subtitle="aboutSubtitle" :title="aboutTitle" :content="aboutContent" :extContent="aboutExtContent" :buttonLabel="aboutButtonLabel" />
@@ -7,7 +6,6 @@
     <ParallaxSection :title="parallaxTite" :buttonText="parallaxButton" />
     <TeamSection :members="teamMembers" :title="teamTitle"/>
     <Footer :logo="logoImageUrl" :footer_heading="footer_heading" :short_desc="short_desc" :discord="footerDiscord" :twitter="footerTwitter" :instagram="footerInstagram" :copyright="footerCopyright" />
-  </div>
 </template>
 
 <script>
@@ -96,7 +94,3 @@
     }
   };
 </script>
-
-<style lang="less">
-  @import "@/assets/less/style.less";
-</style>

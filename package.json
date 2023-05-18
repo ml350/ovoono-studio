@@ -1,6 +1,6 @@
 {
   "dependencies": {
     "three": "^0.150.1",
-    "vue-router": "^4.0.13"
+    "vue-router": "^4.2.0"
   }
 }

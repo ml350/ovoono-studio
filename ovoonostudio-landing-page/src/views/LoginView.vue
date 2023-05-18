@@ -4,6 +4,10 @@
       <button @click="loginWithDiscord">Login with Discord</button>
     </div>
 </template>
+
+
+<style> 
+</style>
   
 <script>
   export default {

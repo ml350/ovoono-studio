@@ -6,7 +6,7 @@
         <button class="button" @click="handleButtonClick">{{ buttonText }}</button>
       </div>
     </div>
-  </template>
+</template>
   
 <script>
   export default {
