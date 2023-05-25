@@ -26,7 +26,8 @@
     "less-loader": "^11.1.0",
     "obj-loader": "^0.0.5",
     "raw-loader": "^4.0.2",
-    "three": "^0.150.1"
+    "three": "^0.150.1",
+    "vue-awesome-sidebar": "^1.2.3"
   },
   "eslintConfig": {
     "root": true,

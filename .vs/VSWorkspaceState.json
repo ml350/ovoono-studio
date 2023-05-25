@@ -1,7 +1,12 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\ovoonostudio-landing-page",
+    "\\ovoonostudio-landing-page\\dist",
+    "\\ovoonostudio-landing-page\\src",
+    "\\ovoonostudio-landing-page\\src\\assets",
+    "\\ovoonostudio-landing-page\\src\\assets\\less",
+    "\\ovoonostudio-landing-page\\src\\views"
   ],
-  "SelectedNode": "\\C:\\Users\\gabig\\Source\\Repos\\ml350\\ovoono-studio",
   "PreviewInSolutionExplorer": false
 }

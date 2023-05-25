@@ -5,12 +5,12 @@
             <h1>Login</h1>
             <form @submit.prevent="loginUser">
                 <div>
-                    <label for="username">Username:</label>
-                    <input id="username" v-model="username" type="text" required class="rounded-input" @input="handleInput">
+                    
+                    <input placeholder="Username" id="username" v-model="username" type="text" required class="rounded-input" @input="handleInput">
                 </div>
                 <div>
-                    <label for="password">Password:</label>
-                    <input id="password" v-model="password" type="password" required class="rounded-input">
+                    
+                    <input placeholder="Password" id="password" v-model="password" type="password" required class="rounded-input">
                 </div>
                 <button type="submit" class="rounded-button">Login</button>
                 <p v-if="errorMessage" class="error-message">{{ errorMessage }}</p>
@@ -105,12 +105,14 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding: 0px;
         /* Add any additional styling for the login form */
     }
 
     .rounded-input {
         border-radius: 20px;
         padding: 10px;
+        
     }
 
     .rounded-button {
@@ -121,6 +123,7 @@
         font-weight: bold;
         border: none;
         cursor: pointer;
+        
         /* Add any additional styling for the button */
     }
 </style>

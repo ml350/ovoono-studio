@@ -1,4 +1,5 @@
 <template>
+    <VueSidebar/>
     <Header :title="headerTitle" :subtitle="headerSubtitle" :paragraph="headerParagraph" :imageUrl="logoImageUrl" />
     <VideoBanner />
     <AboutSection :image="aboutImageUrl" :subtitle="aboutSubtitle" :title="aboutTitle" :content="aboutContent" :extContent="aboutExtContent" :buttonLabel="aboutButtonLabel" />
@@ -16,6 +17,7 @@
   import ParallaxSection from '../components/ParallaxSection.vue';
   import TeamSection from '../components/Team.vue';
   import Footer from '../components/Footer.vue';
+  import VueSidebar from "../components/VueAwesomeSideBar.vue";
 
   export default { 
     components: {
@@ -26,6 +28,7 @@
       ParallaxSection,
       TeamSection,
       Footer,
+      VueSidebar
     },
     data() {
       return {
