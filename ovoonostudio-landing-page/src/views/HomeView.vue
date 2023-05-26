@@ -1,5 +1,4 @@
-<template>
-    <VueSidebar/>
+<template> 
     <Header :title="headerTitle" :subtitle="headerSubtitle" :paragraph="headerParagraph" :imageUrl="logoImageUrl" />
     <VideoBanner />
     <AboutSection :image="aboutImageUrl" :subtitle="aboutSubtitle" :title="aboutTitle" :content="aboutContent" :extContent="aboutExtContent" :buttonLabel="aboutButtonLabel" />
@@ -9,7 +8,7 @@
     <Footer :logo="logoImageUrl" :footer_heading="footer_heading" :short_desc="short_desc" :discord="footerDiscord" :twitter="footerTwitter" :instagram="footerInstagram" :copyright="footerCopyright" />
 </template>
 
-<script>
+<script> 
   import Header from '../components/Header.vue';
   import VideoBanner from '../components/VideoBanner.vue'
   import AboutSection from '../components/About.vue';
@@ -17,10 +16,9 @@
   import ParallaxSection from '../components/ParallaxSection.vue';
   import TeamSection from '../components/Team.vue';
   import Footer from '../components/Footer.vue';
-  import VueSidebar from "../components/VueAwesomeSideBar.vue";
 
   export default { 
-    components: {
+    components: { 
       Header,
       VideoBanner,
       AboutSection,
@@ -28,7 +26,6 @@
       ParallaxSection,
       TeamSection,
       Footer,
-      VueSidebar
     },
     data() {
       return {

@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkovoonostudio_landing_page"]=self["webpackChunkovoonostudio_landing_page"]||[]).push([[962],{1962:function(n,o,u){u.r(o),u.d(o,{default:function(){return l}});var a=u(3396);const e=(0,a._)("h2",null,"Dashboard",-1),r=[e];function t(n,o){return(0,a.wg)(),(0,a.iD)("div",null,r)}var i=u(89);const s={},d=(0,i.Z)(s,[["render",t]]);var l=d}}]);
+//# sourceMappingURL=962.f59ca538.js.map

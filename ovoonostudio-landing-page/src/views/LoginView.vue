@@ -5,11 +5,9 @@
             <h1>Login</h1>
             <form @submit.prevent="loginUser">
                 <div>
-                    
                     <input placeholder="Username" id="username" v-model="username" type="text" required class="rounded-input" @input="handleInput">
                 </div>
                 <div>
-                    
                     <input placeholder="Password" id="password" v-model="password" type="password" required class="rounded-input">
                 </div>
                 <button type="submit" class="rounded-button">Login</button>
@@ -31,21 +29,15 @@
             };
         },
         methods: {
-            loginUser() {
-                // Perform login logic here
-                // You can call a function provided by your friend to handle the authentication
-
-                // For now, let's just log the username and password to the console
-                console.log('Username:', this.username);
-                console.log('Password:', this.password);
-
-                // Check credentials
-                if (this.username === 'admin' && this.password === 'password') {
-                    // After successful login, you can redirect the user to the dashboard
+            async loginUser() {
+                try {
+                    await this.$store.dispatch('login', {
+                        username: this.username,
+                        password: this.password
+                    });
                     this.$router.push('/dashboard');
-                } else {
-                    // Set error message for incorrect credentials
-                    this.errorMessage = 'Invalid credentials';
+                } catch (error) {
+                    this.errorMessage = error.message;
                 }
             },
             handleInput() {
@@ -61,8 +53,7 @@
     };
 </script>
 
-<style>
-
+<style scoped> 
     .error-message {
         color: red;
         margin-top: 10px;
