@@ -10,6 +10,7 @@
   "dependencies": {
     "core-js": "^3.8.3",
     "gltf-pipeline": "^4.0.2",
+    "normalize.css": "^8.0.1",
     "vue": "^3.2.13"
   },
   "devDependencies": {
@@ -28,7 +29,8 @@
     "raw-loader": "^4.0.2",
     "the-new-css-reset": "^1.8.4",
     "three": "^0.150.1",
-    "vue-awesome-sidebar": "^1.2.3"
+    "vue-awesome-sidebar": "^1.2.3",
+    "vue-svg-loader": "^0.16.0"
   },
   "eslintConfig": {
     "root": true,
