@@ -30,23 +30,23 @@
                       <span v-show="isSidebarOpen">Log In</span>
                   </transition>
               </router-link>
-          </li>
-          <li>
-              <a href="https://dalle.emelrizvanovic.com/" target="_blank" rel="noopener noreferrer">
-                  <IconImageGenerator />
-                  <transition name="fade">
-                      <span v-show="isSidebarOpen">Image Generator</span>
-                  </transition>
-              </a>
-          </li>
-          <h4 :class="{ transparent: !isSidebarOpen }">Discord Bots</h4>
+          </li> 
+          <h4 :class="{ transparent: !isSidebarOpen }">Tools</h4>
           <h4 :class="{ transparent: isSidebarOpen }">-----</h4>
           <li>
-              <a href="https://top.gg/bot/1041454438595965049" target="_blank" rel="noopener noreferrer">
+              <a href="https://polygonscan-scrapper.ovoono.studio" target="_blank" rel="noopener noreferrer">
 
                   <img :src="require('@//assets/icons/sidebar/scanner.png')" width="32" height="32" alt="logo">
                   <transition name="fade">
                       <span v-show="isSidebarOpen">Polygon Scanner</span>
+                  </transition>
+              </a>
+          </li>
+          <li>
+              <a href="https://dalle-generator.ovoono.studio" target="_blank" rel="noopener noreferrer">
+                  <IconImageGenerator />
+                  <transition name="fade">
+                      <span v-show="isSidebarOpen">Art Generator</span>
                   </transition>
               </a>
           </li>
@@ -103,15 +103,16 @@
         width: 4rem;
     }
 
-        aside.open {
-            width: 12rem;
-        }
+    aside.open {
+        width: 12rem;
+    }
 
     ul {
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
         padding-block-end: 1rem;
+        margin-top: 15px;
     }
 
     img {
@@ -167,7 +168,7 @@
     }
 
         h4.transparent {
-            opacity: 0;
+            opacity: 0; 
         }
 
     button {

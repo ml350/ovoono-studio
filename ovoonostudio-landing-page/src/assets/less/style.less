@@ -82,6 +82,12 @@ p {
   }
 } 
 
+aside {
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
 .button:disabled,
 .button[disabled] {
   opacity: 0.5;
@@ -137,6 +143,7 @@ p {
 
       p {
         margin-top: 0px;
+        margin-left: 0px;
       }
     }
 
@@ -165,7 +172,7 @@ p {
 } 
 
 .about-section, .services-section, .team-section {
-  margin: 35px 0px;
+  margin: 15px 0px;
 }
 
 .about-section { 
@@ -199,11 +206,14 @@ p {
         margin-top: 0px; 
         margin-top: 10px;
       }
+      p {
+        margin-left: 0px;
+      }
     }
 
     .right-grid {
         img {
-            width: 400px;
+            // width: 400px;
             @media only screen and (max-width: 390px) { 
               width: 390px;
             }

@@ -1,4 +1,7 @@
 <template>
+  <metainfo>
+    <template v-slot:title="{ content }">{{ content ? `${content}` : `SITE_NAME` }}</template>
+  </metainfo>
   <div id="app">
     <sidebar-menu v-if="!isLoginRoute"></sidebar-menu>
     <router-view></router-view>
@@ -7,6 +10,7 @@
 
 <script>   
   import SidebarMenu from './components/SidebarMenu.vue';
+  import { useMeta } from 'vue-meta';
 
   export default {
     name: 'App',  
@@ -18,6 +22,18 @@
         return this.$route.path === '/login';
       },
     },
+    setup () {
+      useMeta({
+        title: 'OvoOno Studio | Web3 Agency',
+        htmlAttrs: { lang: 'en', amp: true }, 
+        meta: [
+          // set og:title and og:description meta tags
+          { property: 'og:title', content: 'OvoOno Studio'},
+          { property: 'og:description', content: 'OvoOno Studio is Web3 agency that provides services as development of dapps and smart contracts, maintencing and monitoring existing once, or making you new brand for your metaverse experience.'},
+          { property: 'og:image', content: 'https://ovoono.studio/assets/logo/ovo3dlogo.png'}
+        ]
+      })
+    } 
   }
 </script>
 

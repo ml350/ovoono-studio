@@ -2,8 +2,7 @@
     <section id="Services" class="services-section">
         <div class="services-container">
             <h3 class="section-subheading">{{ subheading }}</h3>
-            <h2 class="section-heading">{{ title }}</h2>
-            <h4>{{ subtitle }}</h4>
+            <h2 class="section-heading">{{ title }}</h2> 
             <div class="services-grid">
                 <div class="service-card" v-for="(service, index) in services" :key="index" @mouseenter="showText(index)" @mouseleave="hideText(index)">
                     <div class="icon">
@@ -27,33 +26,29 @@
         props: {
             subheading: {
                 type: String,
-                default: "Services",
+                default: "Development and creations",
             },
             title: {
                 type: String,
                 default: "Services",
-            },
-            subtitle: {
-                type: String,
-                default: "Blockchain interactions",
-            },
+            }, 
             services: {
                 type: Array,
                 default: () => [
                     {
                         icon: require("@//assets/icons/FRAUD-Alert.png"),
-                        heading: "Detecting malicious Wallet Activity",
-                        text: "Our expertise enables us to identify individuals or groups engaging in malicious activities within the blockchain ecosystem, such as exploiting rewards systems in violation of the terms of service",
+                        heading: "Detecting malicious activities",
+                        text: "Our expertise enables us to identify individuals or groups engaging in malicious activities within the blockchain",
                     },
                     {
                         icon: require("@//assets/icons/safegiveaway.png"),
-                        heading: "Ensuring Fair Giveaways and Event Rewards",
-                        text: "We specialize in thoroughly examining entries from social platforms for giveaways and event rewards. Our approach ensures that only legitimate users have a chance to participate",
+                        heading: "Ensuring Giveaways and Event Rewards",
+                        text: "We specialize in thoroughly examining entries from social platforms for giveaways and event rewards",
                     },
                     {
                         icon: require("@//assets/icons/network.png"),
                         heading: "Monitoring/Analyzing Social Media Groups",
-                        text: "Our team is proficient in monitoring and analyzing social media groups with the intent to identify and expose malicious actors targeting specific ecosystems",
+                        text: "Our team is proficient in monitoring and analyzing social media groups with the intent to identify actors",
                     },
                     {
                         icon: require("@//assets/icons/research.png"),
@@ -63,22 +58,22 @@
                     {
                         icon: require("@//assets/icons/blockchain.png"),
                         heading: "Web and Blockchain Data Scraping",
-                        text: "Leveraging our expertise in web and blockchain data extraction, we provide comprehensive development services for collecting and analyzing data from multiple sources across the globe.",
+                        text: "We provide comprehensive development services for collecting and analyzing data from multiple sources",
                     },
                     {
                         icon: require("@//assets/icons/api.png"),
-                        heading: "Bot and API Development",
-                        text: "We specialize in bot and API development, providing design, testing, and seamless integration. Our experienced team ensures the creation of secure, reliable, and scalable solutions that enhance functionality and improve user experience",
+                        heading: "Web, Blockchain and API Development",
+                        text: "We specialize in web,smart contracts and API development, providing design, testing, and seamless integration",
                     },
                     {
                         icon: require("@//assets/icons/virtualReality.png"),
                         heading: "Metaverse Creation",
-                        text: "Our team of experts is dedicated to crafting immersive and interactive experiences within the Metaverse. We specialize in developing gaming experiences, designing custom assets, and creating social hubs that captivate your audience",
+                        text: "Our team of experts is dedicated to crafting immersive and interactive experiences within the Metaverse",
                     },
                     {
                         icon: require("@//assets/icons/content.png"),
                         heading: "Video and Graphic Content",
-                        text: "Our creative team excels in producing high-quality video and graphic content tailored to your brand's unique style and vision, while seamlessly integrating with the emerging Metaverse",
+                        text: "Our creative team excels in producing high-quality video and graphic content tailored to your brand's unique style and vision",
                     },
                 ],
             },
@@ -122,55 +117,59 @@
         height: 250px;
     }
 
-        .service-card .icon {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            background-color: #380062;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: opacity 0.5s;
-        }
+    .service-card p {
+        margin: 10px;
+    }
 
-        .service-card .heading {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            padding: 1rem;
-            background-color: #380062;
-            text-align: center;
-            transition: opacity 0.5s;
-        }
+    .service-card .icon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        background-color: #380062;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: opacity 0.5s;
+    }
 
-        .service-card .text {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            padding: 1rem;
-            background-color: #380062;
-            opacity: 0;
-            transition: opacity 0.5s;
-        }
+    .service-card .heading {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 1rem;
+        background-color: #380062;
+        text-align: center;
+        transition: opacity 0.5s;
+    }
 
-        .service-card:hover .icon {
-            opacity: 0;
-        }
+    .service-card .text {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 1rem;
+        background-color: #380062;
+        opacity: 0;
+        transition: opacity 0.5s;
+    }
 
-        .service-card:hover .heading {
-            opacity: 0;
-        }
+    .service-card:hover .icon {
+        opacity: 0;
+    }
 
-        .service-card:hover .text {
-            opacity: 1;
-        }
+    .service-card:hover .heading {
+        opacity: 0;
+    }
+
+    .service-card:hover .text {
+        opacity: 1;
+    }
 
     .fade-in {
         opacity: 1;
@@ -182,5 +181,6 @@
     .icon img {
         width: 50%;
         height: auto;
+        margin-top: -30px;
     }
 </style>

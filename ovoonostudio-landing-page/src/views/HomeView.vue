@@ -61,29 +61,9 @@
           }, 
           {
             name: 'goblinsensei',
-            title: 'Creator',
+            title: 'Developer',
             photo: require('@/assets/team/goblinsensei.png'), 
-          },
-          {
-            name: 'GeekElite',
-            title: 'Blockchain Researcher',
-            photo: require('@/assets/team/geekelite.png'), 
-          },
-          {
-            name: 'Tappacau',
-            title: 'Creator',
-            photo: require('@/assets/team/tappacau.png'), 
-          },
-          {
-            name: 'Markhor',
-            title: 'Creator',
-            photo: require('@/assets/team/markhor.png'), 
-          },
-          {
-            name: 'Popeye',
-            title: 'Creator',
-            photo: require('@/assets/team/popeye.png'), 
-          },
+          },  
           {
             name: 'NullVoider',
             title: 'Creator',

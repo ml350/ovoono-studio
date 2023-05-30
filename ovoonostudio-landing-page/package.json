@@ -1,5 +1,5 @@
 {
-  "name": "ovoonostudio-landing-page",
+  "name": "ovoono-studio",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,9 +9,12 @@
   },
   "dependencies": {
     "core-js": "^3.8.3",
+    "css-select": "^5.1.0",
     "gltf-pipeline": "^4.0.2",
     "normalize.css": "^8.0.1",
-    "vue": "^3.2.13"
+    "svgo": "^3.0.2",
+    "vue": "^3.2.13",
+    "vue-meta": "^3.0.0-alpha.10"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
@@ -29,8 +32,7 @@
     "raw-loader": "^4.0.2",
     "the-new-css-reset": "^1.8.4",
     "three": "^0.150.1",
-    "vue-awesome-sidebar": "^1.2.3",
-    "vue-svg-loader": "^0.16.0"
+    "vue-awesome-sidebar": "^1.2.3"
   },
   "eslintConfig": {
     "root": true,

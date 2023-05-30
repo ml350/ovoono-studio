@@ -19,7 +19,7 @@
 <script> 
   import * as THREE from 'three';
   import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader'; 
-  import textureImage from '@/assets/logo/4K-amethyst_1-diffuse.jpg'; // Replace 'your-texture.png' with the correct texture file name
+  import textureImage from '@/assets/logo/vecteezy_metal-brushed-texture-background-grey-metal_3685335.jpg'; // Replace 'your-texture.png' with the correct texture file name
 
   export default {
     name: 'HeaderSection',
@@ -48,7 +48,7 @@
         camera.position.set(0, 0.3, 2.5);
 
         // Add a light
-        const light = new THREE.PointLight(0xffffff, 1, 100);
+        const light = new THREE.PointLight(0xffffff, 1, 200);
         light.position.set(0, 0, 5);
         scene.add(light);
 

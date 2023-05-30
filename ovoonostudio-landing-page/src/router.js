@@ -39,4 +39,14 @@ router.beforeEach((to, from, next) => {
     }
 });
 
+router.afterEach((to, from) => {
+    if (typeof window.gtag !== 'function') {
+      return;
+    }
+    window.gtag('config', 'G-KZHVCND8ZJ', {
+      'page_path': to.path,
+      'referrer': from.path
+    });
+});
+
 export default router;

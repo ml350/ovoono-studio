@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkovoono_studio"]=self["webpackChunkovoono_studio"]||[]).push([[962],{1962:function(n,o,u){u.r(o),u.d(o,{default:function(){return d}});var r=u(3396);const t=(0,r._)("h2",null,"Dashboard",-1),e=[t];function s(n,o){return(0,r.wg)(),(0,r.iD)("div",null,e)}var a=u(89);const c={},i=(0,a.Z)(c,[["render",s]]);var d=i}}]);
+//# sourceMappingURL=962.60777df4.js.map
