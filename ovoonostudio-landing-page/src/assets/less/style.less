@@ -250,6 +250,9 @@ aside.open {
 
       h1 {
         margin-bottom: 8px;
+        @media only screen and (max-width: 390px) { 
+          width: 100%!important;
+        }
       }
 
       p {
@@ -326,7 +329,7 @@ aside.open {
         img {
             // width: 400px;
             @media only screen and (max-width: 390px) { 
-              width: 390px;
+              width: 360px;
             }
         }
     }
@@ -486,6 +489,10 @@ aside.open {
         width: 250px;
         height: 250px;
 
+        @media only screen and (max-width: 768px) {
+         margin: 0 auto; 
+        }
+
         &:hover {
           .heading {
             opacity: 0;
@@ -499,6 +506,7 @@ aside.open {
             opacity: 0;
           }  
         }
+
         .icon  {
           position: absolute;
           top: 0;
@@ -548,12 +556,15 @@ aside.open {
       .fade-in {
         opacity: 1;
       }
+      
       .service { 
         margin: 0 auto;
         padding: 10px 20px;
         text-align: center;
         background: @purple-variant;
         color: #bfbfbf;
+
+        
 
         img {
           width: 125px;
