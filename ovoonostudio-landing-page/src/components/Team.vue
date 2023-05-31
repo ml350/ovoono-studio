@@ -10,7 +10,7 @@
                     </div>
                     <div class="member-details">
                         <h3 class="member-name">{{ member.name }}</h3>
-                        <p class="member-title">{{ member.title }}</p> 
+                        <!-- <p class="member-title">{{ member.title }}</p>  -->
                     </div>
                 </div>
             </div>
