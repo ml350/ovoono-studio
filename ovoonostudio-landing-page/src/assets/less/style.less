@@ -6,6 +6,8 @@
 @secondary-family: 'Ubuntu', sans-serif;
 @gradient-start: #0a000f;
 @gradient-end: #4d0085;
+@button-color: #41046a87;
+@purple-variant: #2c1127;
 @card-background: #1e0032;
 @card-background-hover: lighten(@card-background, 15%);
 
@@ -64,7 +66,7 @@ p {
   text-align: center;
   text-decoration: none;
   color: #fff;
-  background-color: #41046a87;
+  background-color: @purple-variant;
   text-transform: uppercase;
   font-weight: bold;
   border: none;
@@ -83,9 +85,118 @@ p {
 } 
 
 aside {
+  color: @primary-color;
+  background: @gradient-end;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-block: 1rem;
+  transition: all 300ms;
+  width: 4rem;
+
+  .sidebar-head {
+    position: relative;
+  }
+
+  .sidebar-toggle {
+    padding-inline-start: 1rem;
+  }
+
+  h4 {
+    padding-block-end: 0rem;
+    padding-inline-start: 1rem;
+    user-select: none;
+    pointer-events: none;
+    opacity: 0.7;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.125ch;
+    transition: opacity 300ms;
+  }
+
+  h4.transparent {
+    opacity: 0; 
+  }
+
+  button {
+    cursor: pointer;
+    position: absolute;
+    transition-duration: 300ms;
+    transition-property: transform, left, top;
+    left: 0;
+    top: 1rem;
+    transform: translateX(0%) translateY(2rem) rotateZ(0deg);
+  }
+
+  button.toggle-button {
+    left: 100%;
+    top: 0;
+    transform: translateX(-100%) translateY(0rem) rotateZ(180deg);
+  }
+
+  .fade-enter-active,
+  .fade-leave-active {
+    transition-property: opacity, transform;
+    transition-duration: 300ms;
+  }
+
+  .fade-enter,
+  .fade-leave-to {
+      opacity: 0;
+      transform: translateX(-100%);
+  }
+
+  a.router-link-exact-active::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 0.25rem;
+    height: 100%;
+    background-color: @secondary-color;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-block-end: 1rem;
+    margin-top: 15px;
+  }
+
+  img {
+    object-fit: contain;
+  }
+
+  li {
+    min-width: fit-content;
+    cursor: pointer;
+    padding-inline-start: 1rem;
+    
+    &:hover {
+      color: @primary-color;
+      background-color: @gradient-end;
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      column-gap: 0.75rem;
+      position: relative;
+      padding-block: 0.5rem;
+    }
+  }
+
   @media only screen and (max-width: 768px) {
     display: none;
   }
+
+  @media only screen and (max-width: 390px) { 
+    display: none;
+  }
+}
+
+aside.open {
+  width: 12rem;
 }
 
 .button:disabled,
@@ -346,6 +457,7 @@ aside {
 
     .services-grid {
       display: grid;
+      justify-content: center;
       grid-template-columns: repeat(4, 1fr);
       grid-gap: 15px;
       width: 100%;
@@ -366,11 +478,80 @@ aside {
         grid-template-columns: repeat(1, 1fr);
         margin: 20px auto;
       }
+
+      .service-card {
+        background-color: @purple-variant;
+        position: relative;
+        width: 250px;
+        height: 250px;
+        
+        &:hover {
+          .heading {
+            opacity: 0;
+          }
+
+          .text {
+            opacity: 1;
+          }
+
+          .icon {
+            opacity: 0;
+          }  
+        }
+        .icon  {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 8px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+          background-color: @purple-variant;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transition: opacity 0.5s;
+
+          img {
+            width: 50%;
+            height: auto;
+            margin-top: -30px;
+          }
+        }
+        .text {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          padding: 1rem; 
+          opacity: 0;
+          transition: opacity 0.5s;
+        } 
+
+        .heading {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          padding: 1rem; 
+          text-align: center;
+          transition: opacity 0.5s;
+        }
+
+        p {
+          margin: 10px
+        }
+      } 
+
+      .fade-in {
+        opacity: 1;
+      }
       .service { 
         margin: 0 auto;
         padding: 10px 20px;
         text-align: center;
-        background: #1e0032;
+        background: @purple-variant;
         color: #bfbfbf;
 
         img {

@@ -2,6 +2,7 @@
   "dependencies": {
     "three": "^0.150.1",
     "vue-awesome-sidebar": "^1.2.3",
+    "vue-meta": "^2.4.0",
     "vue-router": "^4.2.0",
     "vuex": "^4.0.2"
   }
