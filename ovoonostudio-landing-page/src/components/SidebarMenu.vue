@@ -3,7 +3,9 @@
     <aside :class="{ open: isSidebarOpen }">
       <ul class="sidebar-head">
         <li>
-          <img src="@/assets/logo/logo-cropped.png" alt="logo" width="32" height="32">
+          <a href="/">
+            <img src="@/assets/logo/logo-cropped.png" alt="logo" width="32" height="32">
+          </a>
         </li>
         <li>
           <button class="sidebar-toggle" @click="toggleSidebar" :class="isSidebarOpen ? 'toggle-button' : ''">
@@ -24,6 +26,14 @@
               </router-link>
           </li>
           <li>
+              <router-link to="/about">
+                  <IconHome />
+                  <transition name="fade">
+                      <span v-show="isSidebarOpen">About</span>
+                  </transition>
+              </router-link>
+          </li>
+          <li>
               <router-link to="/dashboard">
                   <IconEmployeeGroup />
                   <transition name="fade">
@@ -32,7 +42,7 @@
               </router-link>
           </li> 
           <h4 :class="{ transparent: !isSidebarOpen }">Tools</h4>
-          <h4 :class="{ transparent: isSidebarOpen }">-----</h4>
+          <h4 :class="{ transparent: isSidebarOpen }">--------</h4>
           <li>
               <a href="https://polygonscan-scrapper.ovoono.studio" target="_blank" rel="noopener noreferrer">
 
@@ -60,7 +70,7 @@
     import IconAngle from '../assets/icons/sidebar/IconAngle.vue';
     import IconHome from '../assets/icons/sidebar/IconHome.vue';
     import IconEmployeeGroup from '../assets/icons/sidebar/IconEmployeeGroup.vue';
-    import IconImageGenerator from '../assets/icons/sidebar/IconImageGenerator.vue';
+    import IconImageGenerator from '../assets/icons/sidebar/imageGenerator.vue';
     
     export default {
         data() {

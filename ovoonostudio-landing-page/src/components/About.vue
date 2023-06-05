@@ -9,7 +9,7 @@
                 <h2>{{ title }}</h2>
                 <p>{{ content }}</p>
                 <p>{{ extContent }}</p>
-                <router-link class="button" to="/contact">{{ buttonLabel }}</router-link>
+                <router-link class="button" to="/about">{{ buttonLabel }}</router-link>
             </div>
         </div>
     </div>

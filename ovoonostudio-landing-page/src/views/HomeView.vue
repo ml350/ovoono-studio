@@ -1,11 +1,11 @@
 <template> 
-    <Header :title="headerTitle" :subtitle="headerSubtitle" :paragraph="headerParagraph" :imageUrl="logoImageUrl" />
-    <VideoBanner />
-    <AboutSection :image="aboutImageUrl" :subtitle="aboutSubtitle" :title="aboutTitle" :content="aboutContent" :extContent="aboutExtContent" :buttonLabel="aboutButtonLabel" />
-    <ServicesSection />
-    <ParallaxSection :title="parallaxTite" :buttonText="parallaxButton" />
-    <TeamSection :members="teamMembers" :title="teamTitle"/>
-    <Footer :logo="logoImageUrl" :footer_heading="footer_heading" :short_desc="short_desc" :discord="footerDiscord" :twitter="footerTwitter" :instagram="footerInstagram" :copyright="footerCopyright" />
+  <Header :title="headerTitle" :subtitle="headerSubtitle" :paragraph="headerParagraph" :imageUrl="logoImageUrl" />
+  <VideoBanner />
+  <AboutSection :image="aboutImageUrl" :subtitle="aboutSubtitle" :title="aboutTitle" :content="aboutContent" :extContent="aboutExtContent" :buttonLabel="aboutButtonLabel" />
+  <ServicesSection />
+  <ParallaxSection :title="parallaxTite" :buttonText="parallaxButton" />
+  <TeamSection :members="teamMembers" :title="teamTitle"/>
+  <Footer :logo="logoImageUrl" :footer_heading="footer_heading" :short_desc="short_desc" :discord="footerDiscord" :twitter="footerTwitter" :instagram="footerInstagram" :copyright="footerCopyright" />
 </template>
 
 <script> 
@@ -37,7 +37,7 @@
         aboutContent: 'At OvoOno, we are also committed to staying at the forefront of the web3 world. We conduct extensive research and analysis to explore the latest trends and technologies in the digital space.',
         aboutExtContent: 'Overall, OvoOno is a dynamic agency and shop that offers a wide range of services to clients looking to engage in the gaming space or develop their own digital products. With a focus on innovation and quality, we strive to provide our clients with the best possible experience and help them achieve their goals.',
         aboutImageUrl: require('@/assets/aboutimage.png'),
-        aboutButtonLabel: 'Contact Us',
+        aboutButtonLabel: 'Read More',
         parallaxTite: 'Join us in #METAVERSE!',
         parallaxButton: 'Click Here',
         footer_heading: 'OvoOno Studio and Agency',
