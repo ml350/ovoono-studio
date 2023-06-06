@@ -1,4 +1,5 @@
 import { createStore } from 'vuex';
+import axios from 'axios'; // Import axios
 
 export default createStore({
     state: {
@@ -10,16 +11,20 @@ export default createStore({
         },
     },
     actions: {
-        login({ commit }, userCredentials) {
-            // Here, usually you would make a request to your backend API to validate the credentials
-            // And upon successful validation, you would commit the SET_AUTHENTICATED mutation
-            // But for this example, we'll just do a simple check on the front-end
-
-            // Mocked login check
-            if (userCredentials.username === 'admin' && userCredentials.password === 'password') {
-                commit('SET_AUTHENTICATED', true);
-            } else {
-                throw new Error('Invalid credentials');
+        async login({ commit }, userCredentials) {
+            try {
+                const response = await axios.post('http://localhost:3000/login', userCredentials);
+                
+                if (response.data && response.data.token) {
+                    commit('SET_AUTHENTICATED', true);
+                    // You could also store the token in localStorage so that the user stays logged in between page refreshes
+                    localStorage.setItem('token', response.data.token);
+                } else {
+                    throw new Error('Invalid credentials');
+                }
+            } catch (error) {
+                console.error(error);
+                throw new Error('An error occurred while trying to log in');
             }
         }
     },
