@@ -2,7 +2,7 @@
     <div class="login-page">
         <img :class="['logo', { 'logo-bounce': isTyping }]" src="../assets/logo/ovo3dlogo.png" alt="Logo">
         <div class="login-form">
-            <h1>Login</h1>
+            <h1>{{ title }}</h1>
             <form @submit.prevent="loginUser">
                 <div>
                     <input placeholder="Username" id="username" v-model="username" type="text" required class="rounded-input" @input="handleInput">
@@ -10,7 +10,7 @@
                 <div>
                     <input placeholder="Password" id="password" v-model="password" type="password" required class="rounded-input">
                 </div>
-                <button type="submit" class="rounded-button">Login</button>
+                <button type="submit" class="button">Login</button>
                 <p v-if="errorMessage" class="error-message">{{ errorMessage }}</p>
             </form>
         </div>
@@ -21,6 +21,7 @@
     export default {
         data() {
             return {
+                title: 'Welcome',
                 username: '',
                 password: '',
                 typingTimeout: null,

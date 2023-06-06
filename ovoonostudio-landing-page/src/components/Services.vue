@@ -35,6 +35,26 @@
             services: {
                 type: Array,
                 default: () => [
+                {
+                    icon: require("@//assets/icons/api.png"),
+                    heading: "Web, Blockchain and API Development",
+                    text: "We specialize in web,smart contracts and API development, providing design, testing, and seamless integration",
+                },    
+                {
+                        icon: require("@//assets/icons/blockchain.png"),
+                        heading: "Web and Blockchain Data Scraping",
+                        text: "We provide comprehensive development services for collecting and analyzing data from multiple sources",
+                    },
+                    {
+                        icon: require("@//assets/icons/virtualReality.png"),
+                        heading: "Metaverse Creation",
+                        text: "Our team of experts is dedicated to crafting immersive and interactive experiences within the Metaverse",
+                    },
+                    {
+                        icon: require("@//assets/icons/content.png"),
+                        heading: "Video and Graphic Content",
+                        text: "Our creative team excels in producing high-quality video and graphic content tailored to your brand's unique style and vision",
+                    },
                     {
                         icon: require("@//assets/icons/FRAUD-Alert.png"),
                         heading: "Detecting malicious activities",
@@ -54,27 +74,7 @@
                         icon: require("@//assets/icons/research.png"),
                         heading: "Wallets And Smart Contract Monitoring",
                         text: "Our development services specialize in extracting and analyzing data from global web and blockchain sources",
-                    },
-                    {
-                        icon: require("@//assets/icons/blockchain.png"),
-                        heading: "Web and Blockchain Data Scraping",
-                        text: "We provide comprehensive development services for collecting and analyzing data from multiple sources",
-                    },
-                    {
-                        icon: require("@//assets/icons/api.png"),
-                        heading: "Web, Blockchain and API Development",
-                        text: "We specialize in web,smart contracts and API development, providing design, testing, and seamless integration",
-                    },
-                    {
-                        icon: require("@//assets/icons/virtualReality.png"),
-                        heading: "Metaverse Creation",
-                        text: "Our team of experts is dedicated to crafting immersive and interactive experiences within the Metaverse",
-                    },
-                    {
-                        icon: require("@//assets/icons/content.png"),
-                        heading: "Video and Graphic Content",
-                        text: "Our creative team excels in producing high-quality video and graphic content tailored to your brand's unique style and vision",
-                    },
+                    }
                 ],
             },
             contactText: {
