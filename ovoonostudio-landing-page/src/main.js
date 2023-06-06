@@ -11,4 +11,5 @@ const app = createApp(App)
     .use(createMetaManager())
 
 await router.isReady()
+store.dispatch('loadUser');
 app.mount('#app');
