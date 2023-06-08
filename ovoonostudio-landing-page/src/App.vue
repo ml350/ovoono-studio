@@ -2,8 +2,12 @@
   <metainfo>
     <template v-slot:title="{ content }">{{ content ? `${content}` : `SITE_NAME` }}</template>
   </metainfo>
+  <AdSense />
   <div id="app">
     <sidebar-menu v-if="!isLoginRoute"></sidebar-menu>
+    <div id="adsense">
+      <!-- Your ad will be inserted here -->
+    </div>
     <router-view></router-view>
   </div>
 </template>
@@ -14,8 +18,8 @@
 
   export default {
     name: 'App',  
-    components: {
-      SidebarMenu,
+    components: { 
+      SidebarMenu
     },
     computed: {
       isLoginRoute() {

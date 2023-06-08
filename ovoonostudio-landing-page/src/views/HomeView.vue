@@ -6,11 +6,13 @@
   <ParallaxSection :title="parallaxTite" :buttonText="parallaxButton" />
   <TeamSection :members="teamMembers" :title="teamTitle"/>
   <Footer :logo="logoImageUrl" :footer_heading="footer_heading" :short_desc="short_desc" :discord="footerDiscord" :twitter="footerTwitter" :instagram="footerInstagram" :copyright="footerCopyright" />
+  <!-- <AdSense /> -->
 </template>
 
 <script> 
+  // import AdSense from '../components/AdSense.vue';
   import Header from '../components/Header.vue';
-  import VideoBanner from '../components/VideoBanner.vue'
+  import VideoBanner from '../components/VideoBanner.vue';
   import AboutSection from '../components/About.vue';
   import ServicesSection from '../components/Services.vue';
   import ParallaxSection from '../components/ParallaxSection.vue';
@@ -26,6 +28,7 @@
       ParallaxSection,
       TeamSection,
       Footer,
+      // AdSense,
     },
     data() {
       return {
