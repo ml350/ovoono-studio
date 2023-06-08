@@ -28,7 +28,7 @@ export default createStore({
         },
         async login({ commit }, userCredentials) {
             try {
-                const response = await axios.post('http://localhost:3000/auth/login', userCredentials);
+                const response = await axios.post('https://ovoonoapi.azurewebsites.net/auth/login', userCredentials);
                 
                 if (response.data && response.data.token) {
                     commit('SET_AUTHENTICATED', true);
