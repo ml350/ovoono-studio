@@ -4,7 +4,7 @@
   </metainfo>
   <AdSense />
   <div id="app">
-    <sidebar-menu v-if="!isLoginRoute"></sidebar-menu>
+    <sidebar-menu v-if="!isLoginRoute && !isDashboardRoute"></sidebar-menu>
     <div id="adsense">
       <!-- Your ad will be inserted here -->
     </div>
@@ -25,6 +25,10 @@
       isLoginRoute() {
         return this.$route.path === '/login';
       },
+
+      isDashboardRoute() {
+        return this.$route.path === '/dashboard';
+      }
     },
     setup () {
       useMeta({

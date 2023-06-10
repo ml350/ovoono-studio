@@ -4,7 +4,7 @@
       <ul class="sidebar-head">
         <li>
           <a href="/">
-            <img src="@/assets/logo/logo-cropped.png" alt="logo" width="32" height="32">
+            <img class="sidebar-logo" src="@/assets/logo/logo-cropped.png" alt="logo" width="32" height="32">
           </a>
         </li>
         <li>
