@@ -11,7 +11,7 @@
                     <input placeholder="Password" id="password" v-model="password" type="password" required class="rounded-input">
                 </div>
                 <button type="submit" class="button">Login</button>
-                <p v-if="errorMessage" class="error-message">{{ errorMessage }}</p>
+                <p v-if="errorMessage" class="error">{{ errorMessage }}</p>
             </form>
         </div>
     </div>
@@ -54,12 +54,7 @@
     };
 </script>
 
-<style scoped> 
-    .error-message {
-        color: red;
-        margin-top: 10px;
-    }
-
+<style scoped>  
     .login-page {
         display: flex;
         flex-direction: column;

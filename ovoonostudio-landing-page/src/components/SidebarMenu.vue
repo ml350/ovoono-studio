@@ -15,7 +15,6 @@
       </ul>
 
       <h4 :class="{ transparent: !isSidebarOpen }">Menu</h4>
-
       <ul>
           <li>
               <router-link to="/">
@@ -27,7 +26,7 @@
           </li>
           <li>
               <router-link to="/about">
-                  <IconHome />
+                  <IconAbout />
                   <transition name="fade">
                       <span v-show="isSidebarOpen">About</span>
                   </transition>
@@ -45,7 +44,6 @@
           <h4 :class="{ transparent: isSidebarOpen }">--------</h4>
           <li>
               <a href="https://polygonscan-scrapper.ovoono.studio" target="_blank" rel="noopener noreferrer">
-
                   <img :src="require('@//assets/icons/sidebar/scanner.png')" width="32" height="32" alt="logo">
                   <transition name="fade">
                       <span v-show="isSidebarOpen">Polygon Scanner</span>
@@ -65,18 +63,17 @@
   </div>
 </template>
 
-
 <script>
     import IconAngle from '../assets/icons/sidebar/IconAngle.vue';
     import IconHome from '../assets/icons/sidebar/IconHome.vue';
     import IconEmployeeGroup from '../assets/icons/sidebar/IconEmployeeGroup.vue';
     import IconImageGenerator from '../assets/icons/sidebar/imageGenerator.vue';
+    import IconAbout from '../assets/icons/sidebar/IconAbout.vue';
     
     export default {
         data() {
             return {
                 isSidebarOpen: false,
-                
             };
         },
         components: {
@@ -84,7 +81,7 @@
             IconHome,
             IconEmployeeGroup,
             IconImageGenerator,
-            
+            IconAbout
         },
         methods: {
             toggleSidebar() {

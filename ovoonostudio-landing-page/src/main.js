@@ -5,11 +5,12 @@ import App from './App.vue';
 import router from './router';
 import store from './store';
 
+store.dispatch('loadUser');
+
 const app = createApp(App)
     .use(router)
     .use(store)
     .use(createMetaManager())
 
 await router.isReady()
-store.dispatch('loadUser');
 app.mount('#app');

@@ -29,12 +29,12 @@
   
 <style scoped>
   /* Your AdSense CSS if needed */
-    #adsense {
-        display: none;
-    }
+  #adsense {
+      display: none;
+  }
 
-    ins.adsbygoogle {
-        display: none!important;
-    }
+  ins.adsbygoogle {
+      display: none!important;
+  }
 </style>
   

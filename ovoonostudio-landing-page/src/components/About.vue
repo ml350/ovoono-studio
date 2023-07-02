@@ -2,7 +2,7 @@
     <div class="about-section">
         <div class="about-container"> 
             <div class="right-grid">
-                <img :src="image" alt="OvoOno Shop Logo" />
+                <img :src="image" alt="OvoOno Studio " />
             </div>
             <div class="left-grid">
                 <h3>{{ subtitle }}</h3>

@@ -6,7 +6,7 @@
             <div class="services-grid">
                 <div class="service-card" v-for="(service, index) in services" :key="index" @mouseenter="showText(index)" @mouseleave="hideText(index)">
                     <div class="icon">
-                        <img :src="service.icon" alt="" />
+                        <img :src="service.icon" :alt="service.heading" />
                     </div>
                     <div class="heading">{{ service.heading }}</div>
                     <div class="text" :class="{ 'fade-in': showTextArr[index] }">

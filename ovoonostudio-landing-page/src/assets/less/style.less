@@ -20,6 +20,10 @@ body {
   margin: 0px; 
 }
 
+body.no-scroll {
+  overflow: hidden;
+}
+
 h1 {
   font-family: @primiary-family;
   color: @primary-color;
@@ -568,8 +572,6 @@ aside.open {
         background: @purple-variant;
         color: #bfbfbf;
 
-        
-
         img {
           width: 125px;
           margin-bottom: 17px;
@@ -585,6 +587,67 @@ aside.open {
   }  
 } 
 
+.dashboard {
+  height: 100vh;
+
+  h3 {
+    margin-bottom: 20px;
+  }
+
+  .main { 
+    color: #fff; /* Make sure the text is readable against the background */
+    display: flex;
+    justify-content: space-between;
+    padding: 28px;
+
+    .content {
+      width: 80%;
+    }
+
+    .sidebar {
+      width: 20%;
+    }  
+  } 
+
+  .modal {
+    /* Positioned Parent */
+    position: fixed; /* Updated from relative to fixed */
+    top: 0; /* New */
+    left: 0; /* New */
+    width: 100%; /* New */
+    height: 100vh; /* Updated from unset to 100vh */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Semi-transparent background */
+    background-color: rgba(0, 0, 0, 0.5);
+    
+    .modal-content {
+      /* Modal Content/Box */ 
+      margin: auto;
+      padding: 20px;
+      // border: 1px solid #888;
+      width: unset; /* Could be more or less, depending on screen size */
+      border-radius: 10px;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+      .close-button {
+        /* The Close Button */
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+
+        &:hover, &:focus {
+          color: black;
+          text-decoration: none;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
 .login-form {
   background: linear-gradient(135deg, @gradient-start 0%, @gradient-end 100%);
   border-radius: 10px;
@@ -595,6 +658,44 @@ aside.open {
   .button {
     margin-bottom: 10px;
   }
+}
+
+.blog-form, .change-password-form {
+  width: 400px;
+  background: linear-gradient(135deg, @gradient-start 0%, @gradient-end 100%);
+  border-radius: 10px;
+  padding: 20px;
+  border: 1px solid #0000001c;
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+
+  input, textarea {
+    background: #6b299938;
+    border-radius: 10px;
+    padding: 11px;
+    margin: 6px 0px;
+  }
+}
+
+p.error {
+  background: red;
+  padding: 10px;
+  margin: 0px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+p.success {
+  background: @primary-color;
+  border-radius: 10px;
+  color: #0a000f;
+  padding: 10px;
+  margin: 0px;
+  margin-bottom: 20px;
 }
 
 footer.footer {
