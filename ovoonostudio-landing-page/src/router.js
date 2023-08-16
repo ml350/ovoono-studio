@@ -22,7 +22,14 @@ const routes = [
         name: 'Dashboard',
         component: () => import('./views/DashboardView.vue'),
         meta: { requiresAuth: true }
-    },
+    }, 
+    {
+        path: '/posts/edit/:id',
+        name: 'EditPost',
+        component: () => import('./views/EditView.vue'),
+        props: true,
+        meta: { requiresAuth: true }
+    }
 ];
 
 const router = createRouter({

@@ -58,9 +58,10 @@
       </div>
       <div class="sidebar">
         <h3>Recent Posts</h3>
-        <div v-if="recentPosts.length">
-          <div v-for="post in recentPosts" :key="post.id">
-            <!-- display post data -->
+        <div v-if="posts.length">
+          <div v-for="post in posts" :key="post.id">
+            <h3>{{ post.title }}</h3>
+            <button @click="navigateToEdit(post.id)">Edit</button>
           </div>
         </div>
         <div v-else>
@@ -72,7 +73,7 @@
 </template>
   
 <script>
-  import { mapActions } from 'vuex';
+  import { mapActions, mapState } from 'vuex';
 
   export default {
     data() {
@@ -101,12 +102,16 @@
       this.loadUser();
     },
     computed: {  
+      ...mapState(['posts']), 
       username() {
         return localStorage.getItem('username');
       }
     },
     methods: {
-      ...mapActions(['logout', 'createPost', 'loadUser', 'changePassword']), // Include createPost action
+      ...mapActions(['logout', 'createPost', 'loadUser', 'changePassword', 'fetchPosts']), // Include createPost action
+      navigateToEdit(postId) {
+        this.$router.push(`/posts/edit/${postId}`);
+      },
       logoutAndRedirect() {
         this.logout().then(() => {
           this.$router.push('/login');
@@ -164,7 +169,7 @@
               thumbnail: null,
               tags: '',
               author: ''
-            }; 
+            };  
           })
           .catch(error => {
             this.errorMessage = 'An error occurred: ' + error.message; // Display error message
@@ -179,5 +184,9 @@
         }
       },
     },
+    async created() {
+      await this.loadUser();
+      await this.fetchPosts();
+    }
   };
 </script>

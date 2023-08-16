@@ -1,5 +1,6 @@
 import { createStore } from 'vuex';
-import axios from 'axios'; 
+import axios from 'axios';
+import createPersistedState from "vuex-persistedstate";
 
 // Set axios defaults
 axios.defaults.baseURL = 'https://ovoonoapi.azurewebsites.net';
@@ -82,8 +83,15 @@ export default createStore({
         },
         fetchPosts({ dispatch, commit }) {
             return dispatch('executeRequest', { method: 'get', url: '/posts' })
-                .then(data => commit('SET_POSTS', data));
-        },
+              .then(data => {
+                console.log(data);
+                commit('SET_POSTS', data);
+              })
+              .catch(error => {
+                console.error('Error fetching posts:', error);
+                throw error; // re-throw the error
+              });
+        },       
         createPost({ commit, state, dispatch }, formData) {
             if (!formData.get('author')) {
                 const error = 'Author is required';
@@ -97,6 +105,19 @@ export default createStore({
                 data: formData, 
                 headers: { 'Content-Type': 'multipart/form-data' } // set the Content-Type header to multipart/form-data
             }).then(data => commit('SET_POSTS', [...state.posts, data]));
+        },
+        editPost({ commit, state, dispatch }, updatedPost) {
+            return dispatch('executeRequest', { 
+                method: 'put', 
+                url: `/posts/${updatedPost.id}`, 
+                data: updatedPost
+            }).then(() => {
+                const updatedPosts = state.posts.map(post => 
+                    post.id === updatedPost.id ? updatedPost : post
+                );
+                commit('SET_POSTS', updatedPosts);
+            });
         }
-    }
+    },
+    plugins: [createPersistedState()],
 });
